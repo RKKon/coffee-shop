@@ -3,10 +3,18 @@
 	margin: 0 auto
 
 .search_menu_flex
-	width: 750px
-	margin-left: 50px
+	width: 800px
+	margin-left: 15px
 	display: flex
 	flex-direction: row
+.buy_btn 
+	color: #d5a069
+	background-color: #dad2c5
+	padding: 5px 15px
+	border: 1px solid white
+	border-radius: 5px
+	cursor: pointer
+	margin: 0px 5px 10px 20px
 
 #searchCoffee
 	width: 180px
@@ -31,7 +39,7 @@
 	cursor: pointer
 	margin-right: 5px
 	
-#brazil
+#all
 	border-radius: 4px 0px 0px 4px
 
 #columbia	
@@ -43,7 +51,7 @@
 .search_flex
 	display: flex
 	flex-direction: row
-	justify-content: space-between
+	/* justify-content: space-between */
 	flex-wrap: wrap
 	margin: 0 auto
 	width: 800px
@@ -51,6 +59,7 @@
 	margin-block-start: 0px
 	margin-block-end: 0px
 	margin-bottom: 30px
+	
 
 .search_flex_item
 	width: 220px
@@ -59,7 +68,10 @@
 	background: #FFFFFF
 	border-radius: 8px
 	margin-top: 60px
+	margin-right: 60px
 	list-style-type: none
+	&:nth-child(3n)
+		margin-right: 0px
 
 .search_item_img
 	display: block
@@ -67,4 +79,81 @@
 	height: 130px
 	margin: 0 auto
 	margin-top: 28px
+
+// cart	
+.cart 
+	display: block
+	min-width: 500px
+	padding-left: 5px
+	cursor: pointer
+	position: fixed
+	left: 47%
+	top: 6%
+	z-index: 50
+
+.cart_img
+	display: block
+	margin-left: 425px
+	margin-bottom: 5px
+	width: 50px
+	cursor: pointer
+
+.cart_title
+	display: flex
+	justify-content: space-between
+	margin-bottom: 20px
+
+.cart_title_item_margin
+	margin-right: 100px
+
+.cart_list 
+	background-color: rgba(218, 210, 197, 0.8)
+	border: 1px solid #d5a069
+	border-radius: 5px
+	margin-right: 12px
+	padding: 10px
+
+.cart_items_display_none
+	display: none
+
+.cart_item
+	display: flex
+	cursor: pointer
+	margin-bottom: 15px
+	justify-content: space-between
+
+.cart_item_name
+	min-width: 200px
+	display: inline-block
+	margin-right: 10px
+	
+.cart_item_country
+	display: inline-block
+	margin-right: 10px
+	min-width: 90px
+.cart_item_price 
+	display: inline-block
+
+.cart_total
+	position: relative
+	left: 75%
+	margin-bottom: 15px
+	color: #4c4944
+	font-size: 17px
+
+.cart_btn
+	position: relative
+	left: 70%
+	color: #b78d61
+	background-color: #4c4944
+
+.cart_trash_can 
+	background-color: #dad2c500
+	border: none
+	cursor: pointer
+	img
+		width: 20px
+
+
+
 	

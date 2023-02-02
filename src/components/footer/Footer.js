@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import '../../assets/sass/style.sass';
 import './footer.sass';
 
@@ -11,9 +13,9 @@ const Footer = () => {
         <img src={footerCoffeeBeans} alt="coffee beans"/>
         <nav>
           <ul className="footer_flex_menu">
-            <li className="footer_menu_item"><a href="#">Coffee house</a> </li>
-            <li className="footer_menu_item"><a href="#">Our coffee</a></li>
-            <li className="footer_menu_item"><a href="#">For your pleasure</a></li>
+            <li className="footer_menu_item"><Link to="/">Coffee house</Link></li>
+            <li className="footer_menu_item"><Link to="/ourCoffee">Our coffee</Link></li>
+            <li className="footer_menu_item"><Link to="/yourPleasure">For your pleasure</Link></li>
           </ul>
         </nav>
       </div>

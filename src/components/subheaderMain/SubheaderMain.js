@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 import '../../assets/sass/style.sass';
 import './subheaderMain.sass';
 
@@ -18,7 +20,7 @@ const SubheaderMain = () => {
           </div>
           <h3 className="sub_title">We makes every day full of energy and taste</h3>
           <h3 className="sub_title mb_10">Want to try our beans?</h3>
-          <button className="btn">More</button>
+          <Link to="/ourCoffee"><button className="btn">More</button></Link>
         </div>
       </div>
     </section>
