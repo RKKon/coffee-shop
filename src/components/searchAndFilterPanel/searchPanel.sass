@@ -29,7 +29,7 @@
 	margin-right: 83px
 
 .filter_style
-	min-width: 75px
+	min-width: 95px
 	height: 30px
 	//padding: 6px auto
 	background: #FFFFFF
@@ -83,9 +83,8 @@
 // cart	
 .cart 
 	display: block
-	min-width: 500px
+	min-width: 480px
 	padding-left: 5px
-	cursor: pointer
 	position: fixed
 	left: 47%
 	top: 6%
@@ -98,14 +97,6 @@
 	width: 50px
 	cursor: pointer
 
-.cart_title
-	display: flex
-	justify-content: space-between
-	margin-bottom: 20px
-
-.cart_title_item_margin
-	margin-right: 100px
-
 .cart_list 
 	background-color: rgba(218, 210, 197, 0.8)
 	border: 1px solid #d5a069
@@ -116,16 +107,71 @@
 .cart_items_display_none
 	display: none
 
+.cart_title
+	display: flex
+	margin-bottom: 20px
+	margin-top: -15px
+
+.cart_title_amount
+	margin-right: 46px
+
+.cart_title_item_margin
+	margin-right: 163px
+
 .cart_item
 	display: flex
 	cursor: pointer
-	margin-bottom: 15px
-	justify-content: space-between
+	margin-bottom: 10px
+	border: 2px solid #d5a069
+	border-radius: 10px
+	padding: 5px 0px 1px 0px
+	background-color: #d5a0699e
 
 .cart_item_name
-	min-width: 200px
+	min-width: 180px
 	display: inline-block
 	margin-right: 10px
+	margin-left: 10px
+
+.cart_quantity
+	width: 78px
+	margin-right: 12px
+	margin-left: 45px
+	
+.cart_item_price 
+	margin-left: 11px
+	margin-right: 4px
+	width: 50px
+	display: inline-block
+
+.cart_plus_quantity_btn
+	padding: 0px 6px
+	margin-left: 5px
+	border-radius: 100%
+	border: 2px solid #b78d61
+	background-color: #4c4944
+	color: #b78d61
+	cursor: pointer
+
+.cart_minus_quantity_btn
+	padding: 0px 6px
+	margin-right: 5px
+	border-radius: 100%
+	border: 2px solid #b78d61
+	background-color: #4c4944
+	color: #b78d61
+	cursor: pointer
+
+.cart_trash_can 
+	margin-left: 8px
+	margin-right: 10px
+	background-color: #dad2c500
+	border: none
+	cursor: pointer
+	img
+		width: 20px
+		background-color: rgb(218 210 197 / 20%)
+		border-radius: 100%
 	
 .cart_item_country
 	display: inline-block
@@ -147,12 +193,33 @@
 	color: #b78d61
 	background-color: #4c4944
 
-.cart_trash_can 
-	background-color: #dad2c500
+.cart_close
+	width: 1px
+	height: 1px
+	position: relative
+	left: 104%
+	z-index: 55
+	font-size: 43px
+	color: #5a5151
+	margin: -33px 0 0 0
+	background-color: #ffffff00
 	border: none
 	cursor: pointer
-	img
-		width: 20px
+
+.btn_see_all_coffee
+	position: relative
+	height: 42px
+	width: 150px
+	left: 50%
+	transform: translateX(-50%)
+	padding: 5px 15px
+	margin: 0px 5px 10px 20px
+	border-radius: 5px
+	border: none
+	color: #b78d61
+	background-color: #4c4944
+	cursor: pointer
+
 
 
 

@@ -2,31 +2,57 @@ import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 
 import { FetchJson } from "./Server";
+import { CoffeeAPI } from "./Server";
 import Subheader from "../subheader/Subheader";
 
 import '../../assets/sass/style.sass';
 import './coffeeItemPage.sass';
 
-import itemCoffee from '../../assets/img/item_coffee.jpg';
 import coffeeBeans from '../../assets/icons/main_page_coffee_beans.png';
 
 const CoffeeItemSinglePage = () => {
-  const [coffeeItem, SetCoffeeItem] = useState(null);
+  const [coffeeItem, setCoffeeItem] = useState(null);
+  const [coffeeInServer, setCoffeeInServer] = useState(null)
   const [filter, setFilter] = useState(null);
-  const getCoffeeItem = () => FetchJson(SetCoffeeItem)
+  const coffeePrices = ['1.29$', "2.30$", '3.10$', '1.99$', '2.00$','1.69$', '3.10$', '4.99$', '2.49$', '1.99$', '2.20$', '2.99$', '3.99$', '2.59$', '2.99$', '3.49$', '2.10$', '1.49$', '2.30$', '4.29$'];
+  
+  const getCoffeeItems = async () => {
+    await CoffeeAPI(setCoffeeItem);
+    FetchJson(setCoffeeInServer);
+  }
+
+  const updateCoffeeDataFromAPI = () => {
+    if (coffeeItem) {
+      // eslint-disable-next-line array-callback-return
+      coffeeItem.map((item, i) => {
+        item.price = coffeePrices[i]
+        item.quantity = 1
+      })
+    }
+  }
+
+  const url = +(document.location.pathname.replace(/\//g, ''));
+
+  const getRightItem = () => {
+    updateCoffeeDataFromAPI();
+    let filteredOne = coffeeItem ? coffeeItem.filter(coffee => coffee.id === url) : null
+    let filteredTwo = coffeeInServer ? coffeeInServer.filter(coffee => coffee.id === url) : null
+    if (filteredOne && filteredOne.length) {
+      setFilter(filteredOne)
+    } else if (filteredTwo && filteredTwo.length) {
+      setFilter(filteredTwo)
+    }
+  }
 
   useEffect(() => {
-    getCoffeeItem();
+    getCoffeeItems();
   },[])
   
   useEffect(() => {
     getRightItem()
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   },[coffeeItem])
-  
-  const url = document.location.pathname;
-  const getRightItem = () => {
-    return setFilter(!coffeeItem ? null : coffeeItem.filter(coffee => coffee.link === url))
-  }
+
   
   return (
     <>
@@ -39,7 +65,7 @@ const CoffeeItemSinglePage = () => {
       
       <section className="coffee_item_main">
       <div className="coffee_item_main_flex">
-        <img className="coffee_page_item_img" src={filter ? filter[0].coffeeImg : null} alt="our coffee"/>
+        <img className="coffee_page_item_img" src={filter ? filter[0].image : null} alt="our coffee"/>
 
         <div className="about_our_beans_description">
           <h2 className="content_title">{filter ? filter[0].title : null}</h2>
@@ -50,7 +76,7 @@ const CoffeeItemSinglePage = () => {
               <div className="right_line"></div>
             </div>
           </div>
-          <p className="bold_text item_mb">Country:<span> {filter ? filter[0].country : null}</span></p> 
+          <p className="bold_text item_mb">Ingredients:<span> {filter ? filter[0].ingredients.join(', ') : null}</span></p> 
           <p className="item_mb"><span className="bold_text">Description:</span> {filter ? filter[0].description : null}</p>
           <p className="bold_text">Price: <span className="item_big_price"> {filter ? filter[0].price : null}</span></p> 
         </div>

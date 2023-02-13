@@ -12,6 +12,9 @@ import YourPleasurePage from "../pages/YourPleasurePage";
 // 6) drill using another library and documentation from library
 // make from API thing like random coffee. try new coffee. 
 // random coffee. button- try new coffee. before that desc tired from usual coffee? try new one.
+// coffeePage put img if img not found. The same in list of coffee items need img if img not found
+// to drill registration form
+// check box that agree witch cooky in form
 
 function App() {
   return (
