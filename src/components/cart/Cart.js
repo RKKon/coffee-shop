@@ -1,10 +1,61 @@
+import { useState } from 'react';
+
 import CartImg from '../../assets/icons/cart.png';
 import TrashCan from '../../assets/icons/trash_can.png';
+import Form from '../form/Form';
+import { ShowMessageForm } from '../form/Form';
+
+import './cart.sass';
+import '../../assets/sass/style.sass';
 
 const Cart = (props) => {
-  const {cart, showCart, onDeleteFromCart, totalPrice, onCartDecrCoffee, onCartIncrCoffee, openForm} = props
+  const {cart, showCart, onDeleteFromCart, totalPrice, onCartDecrCoffee, onCartIncrCoffee,
+    setCart, setTotalPrice} = props
+  
+  const [openedFrom, setOpenedForm] = useState(false);
+	const [customerPhone, setCustomerPhone] = useState(null);
+  const [sentForm, setSentForm] = useState(false)
+
+  const openForm = () => { 
+		setOpenedForm(true) 
+		document.body.style.overflow = "hidden"
+		showCart();
+	};
+
+	const closeForm = () => {
+		setOpenedForm(false)
+		document.body.style.overflow = '';
+	};
+	
+	const sendForm = (e) => {
+		e.preventDefault ()
+		const divError = document.createElement('div')
+		divError.textContent = 'Please, enter correct phone number.'
+		divError.classList.add('form_message_error_phone')
+		
+		let validPhone = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){7,14}(\s*)?$/;
+		if (validPhone.test(customerPhone)) {
+			setOpenedForm(false)
+			document.body.style.overflow = '';
+			console.log(customerPhone, `${totalPrice}$`, cart); 
+			setCart([])
+			setTotalPrice(0)
+			setSentForm(true)
+			setTimeout(() => setSentForm(false), 3000) // close form message
+		} else { 
+			console.log('error');
+			const form = document.querySelector('.form').childNodes
+			if (form[5]) form[5].remove()
+			document.querySelector('.form_btn').after(divError)
+			setSentForm(false)
+		}
+	};
+
   return (
     <div className='cart'>
+      {openedFrom ? <Form closeForm={closeForm} sendForm={sendForm} customerPhoneValue={setCustomerPhone} /> : null}
+      {sentForm ? <ShowMessageForm/> : null}
+
       <img className='cart_img' onClick={showCart} src={CartImg} alt="cart" />
       
       <div className="cart_list cart_items_display_none">

@@ -3,7 +3,7 @@
     {
       "id": 991,
       "link": "/aromistico",
-      "image": "static/media/layout_coffee.dcb91dcba4b6b965f048.png",
+      "image": "/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "AROMISTICO Coffee 1 kg",
       "country": "Brazil",
       "ingredients": ["Secret"],
@@ -14,7 +14,7 @@
     {
       "id": 992,
       "link": "/great_coffee",
-      "image": "static/media/layout_coffee.dcb91dcba4b6b965f048.png",
+      "image": "/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "Great Coffee 1 kg",
       "country": "Kenya",
       "ingredients": ["Secret"],
@@ -25,7 +25,7 @@
     {
       "id": 993,
       "link": "/awesome_coffee",
-      "image": "static/media/layout_coffee.dcb91dcba4b6b965f048.png",
+      "image": "/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "Awesome Coffee 0.5 kg",
       "country": "Columbia",
       "ingredients": ["Secret"],
@@ -36,7 +36,7 @@
     {
       "id": 994,
       "link": "/new_coffee",
-      "image": "static/media/layout_coffee.dcb91dcba4b6b965f048.png",
+      "image": "/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "New Coffee 1 kg",
       "country": "Brazil",
       "ingredients": ["Secret"],
@@ -47,7 +47,7 @@
     {
       "id": 995,
       "link": "/solimo",
-      "image": "static/media/main_coffee_1.93b7ca5e4837fd856f71.png",
+      "image": "/static/media/main_coffee_1.93b7ca5e4837fd856f71.png",
       "title": "Solimo Coffee Beans 2 kg",
       "country": "Kenya",
       "ingredients": ["Secret"],
@@ -58,7 +58,7 @@
     {
       "id": 996,
       "link": "/presto",
-      "image": "static/media/main_coffee_3.eac7a0065dc6e158d889.png",
+      "image": "/static/media/main_coffee_3.eac7a0065dc6e158d889.png",
       "title": "Presto Coffee Beans 1 kg",
       "country": "Columbia",
       "ingredients": ["Secret"],
@@ -66,5 +66,26 @@
       "quantity": 1,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
+  ],
+  "orders": [
+    {
+      "id": "95467386576395",
+      "phone": "+7 (111) 111-11-11",
+      "total": "6.20$",
+      "coffees": [
+        {
+          "id": 996,
+          "link": "/presto",
+          "image": "/static/media/main_coffee_3.eac7a0065dc6e158d889.png",
+          "title": "Presto Coffee Beans 1 kg",
+          "country": "Columbia",
+          "ingredients": ["Secret"],
+          "price": "15.99$",
+          "quantity": 1,
+          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+        }
+      ]
+    }
+
   ]
 }
