@@ -28,7 +28,7 @@ function App() {
         <Suspense fallback={<Spinner/>}>
           <Header/>  
           <Routes>
-            <Route path="/" element={<MainPage/>}/>
+            <Route path="/coffee-shop" element={<MainPage/>}/>
             <Route path="/ourCoffee" element={<OurCoffeePage/>}/>
             <Route path="/ourCoffee/:coffeeTitle" element={<CoffeeItemSinglePage/>}/>
             <Route path="/yourPleasure" element={<YourPleasurePage/>}/>

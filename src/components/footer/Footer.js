@@ -13,7 +13,7 @@ const Footer = () => {
         <img src={footerCoffeeBeans} alt="coffee beans"/>
         <nav>
           <ul className="footer_flex_menu">
-            <li className="footer_menu_item"><Link to="/">Coffee house</Link></li>
+            <li className="footer_menu_item"><Link to="/coffee-shop">Coffee house</Link></li>
             <li className="footer_menu_item"><Link to="/ourCoffee">Our coffee</Link></li>
             <li className="footer_menu_item"><Link to="/yourPleasure">For your pleasure</Link></li>
           </ul>

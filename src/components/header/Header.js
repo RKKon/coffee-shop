@@ -21,7 +21,7 @@ const Header = () => {
         <img src={headerCoffeeBeans} alt="coffee beans"/>
         <nav>
           <ul className="header_flex_menu">
-            <li className="header_item"><Link to="/">Coffee house</Link></li>
+            <li className="header_item"><Link to="/coffee-shop">Coffee house</Link></li>
             <li className="header_item"><Link to="/ourCoffee">Our coffee</Link></li>
             <li className="header_item"><Link to="/yourPleasure">For your pleasure</Link></li>
             <li onClick={() => toggleRegForm(true)} className="header_item header_item_from">Sign in</li>
