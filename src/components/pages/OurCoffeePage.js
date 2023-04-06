@@ -158,7 +158,7 @@ const OurCoffeePage = () => {
 
       <Subheader subheaderBG={'subheader_our_coffee'} subheaderTitle="Our Coffee"/>
       <OurCoffee/>
-      
+
       {loading ? <Spinner selectorId='preloader_for_items'/> : !filter ? <NotFoundCoffee visibleLink={false}/>
 			: <RandomCoffee allItems={allItems} addToCart={addToCart}/>}
 

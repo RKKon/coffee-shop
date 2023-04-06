@@ -12,7 +12,7 @@ export const CoffeeAPI = async (setCoffeeAPI, setLoading) => {
   .then(data => {
     let res = []
     for (let i = 0; i < 20; i++) { res.push(data[i]) }
-
+    // before was in //
     // let delDuplicates = []; // this part to remove duplicates items by using title, not id
     // for (let i = 0; i < 20; i++) {
     //   for (let k = 0; k < 20 ; k++) {
@@ -22,6 +22,7 @@ export const CoffeeAPI = async (setCoffeeAPI, setLoading) => {
     // }
     // delDuplicates.unshift(data[0])
     // res = delDuplicates
+
     if (res && res.length) setLoading(false)
     setCoffeeAPI(res)
   })

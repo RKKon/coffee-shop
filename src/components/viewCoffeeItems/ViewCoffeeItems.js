@@ -13,15 +13,19 @@ const ViewCoffeeItems = ({filteredCoffeeItem, addToCart}) => {
 					return (
 						<li key={coffeeItem.id ? coffeeItem.id : null} className="search_flex_item">
 							<Link to={`/ourCoffee/${coffeeItem.id ? coffeeItem.id : null}`}>
-								<img className="search_item_img" onError={replaceImage} src={coffeeItem.image ? coffeeItem.image : imgNotFound} 
-								alt={coffeeItem.title ? coffeeItem.title : null}/>
+								<img className="search_item_img" src={coffeeItem.image ? coffeeItem.image : imgNotFound} 
+									alt={coffeeItem.title ? coffeeItem.title : null} onError={replaceImage} />
 								<h3 className="coffee_name">{coffeeItem.title ? coffeeItem.title : null}</h3>
-								<p className="coffee_country">Ingredients:<span> {coffeeItem.ingredients ? coffeeItem.ingredients.join(', ') : null}</span></p>
-								<p className="coffee_price">{coffeeItem.price ? coffeeItem.price : null}</p>
+								<p className="coffee_country">
+									Ingredients:<span> {coffeeItem.ingredients ? coffeeItem.ingredients.join(', ') : null}</span></p>
 							</Link>
+							<div className='coffee_item_on_bottom'>
+								<p className="coffee_price">{coffeeItem.price ? coffeeItem.price : null}</p>
 								<button onClick={() => addToCart(coffeeItem.id ? coffeeItem.id : null)} 
 									className='buy_btn'>Buy now
 								</button>
+							</div>
+
 						</li>
 					)
 				})
