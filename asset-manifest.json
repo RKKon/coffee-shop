@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/coffee-shop/static/css/main.96e6f867.css",
-    "main.js": "/coffee-shop/static/js/main.f3c72b50.js",
+    "main.js": "/coffee-shop/static/js/main.fcad027e.js",
     "static/js/595.7187d1a6.chunk.js": "/coffee-shop/static/js/595.7187d1a6.chunk.js",
     "static/css/458.a9cc369f.chunk.css": "/coffee-shop/static/css/458.a9cc369f.chunk.css",
     "static/js/458.c74eb132.chunk.js": "/coffee-shop/static/js/458.c74eb132.chunk.js",
@@ -26,7 +26,7 @@
     "static/media/img_not_found.jpg": "/coffee-shop/static/media/img_not_found.9b82276c5760c55b592e.jpg",
     "index.html": "/coffee-shop/index.html",
     "main.96e6f867.css.map": "/coffee-shop/static/css/main.96e6f867.css.map",
-    "main.f3c72b50.js.map": "/coffee-shop/static/js/main.f3c72b50.js.map",
+    "main.fcad027e.js.map": "/coffee-shop/static/js/main.fcad027e.js.map",
     "595.7187d1a6.chunk.js.map": "/coffee-shop/static/js/595.7187d1a6.chunk.js.map",
     "458.a9cc369f.chunk.css.map": "/coffee-shop/static/css/458.a9cc369f.chunk.css.map",
     "458.c74eb132.chunk.js.map": "/coffee-shop/static/js/458.c74eb132.chunk.js.map",
@@ -41,6 +41,6 @@
   },
   "entrypoints": [
     "static/css/main.96e6f867.css",
-    "static/js/main.f3c72b50.js"
+    "static/js/main.fcad027e.js"
   ]
 }
