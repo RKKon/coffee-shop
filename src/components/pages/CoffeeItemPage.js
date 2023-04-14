@@ -24,7 +24,7 @@ const CoffeeItemSinglePage = () => {
   
   const getCoffeeItems = async () => {
     await CoffeeAPI(setCoffeeItem, setLoading);
-    FetchJson(setCoffeeInServer, 'http://localhost:3000/db.json');
+    FetchJson(setCoffeeInServer/* , 'http://localhost:3000/db.json' */);
   }
 
   const updateCoffeeDataFromAPI = () => {

@@ -16,9 +16,9 @@ const ViewCoffeeItems = ({filteredCoffeeItem, addToCart}) => {
 								<img className="search_item_img" src={coffeeItem.image ? coffeeItem.image : imgNotFound} 
 									alt={coffeeItem.title ? coffeeItem.title : null} onError={replaceImage} />
 								<h3 className="coffee_name">{coffeeItem.title ? coffeeItem.title : null}</h3>
-								<p className="coffee_country">
-									Ingredients:<span> {coffeeItem.ingredients ? coffeeItem.ingredients.join(', ') : null}</span></p>
 							</Link>
+							<p className="coffee_country">
+								Ingredients:<span> {coffeeItem.ingredients ? coffeeItem.ingredients.join(', ') : null}</span></p>
 							<div className='coffee_item_on_bottom'>
 								<p className="coffee_price">{coffeeItem.price ? coffeeItem.price : null}</p>
 								<button onClick={() => addToCart(coffeeItem.id ? coffeeItem.id : null)} 

@@ -26,18 +26,27 @@ const SearchAndFilterPanel = (props) => {
 		}
 	}
 
+	const addActiveStyleFilter = (idOrClassName = '#all') => {
+		let allInputs = document.getElementsByClassName("filter_style");
+		Array.from(allInputs).forEach(item => item.classList.remove('filter_active'))
+		document.querySelector(idOrClassName).classList.add('filter_active')
+	}
+
 	const mainFilter = (myFilter) => {
 		if (myFilter === 'allItems') {
 			setFilter(allItems)
+			addActiveStyleFilter('#all')
 		} else if (myFilter === 'drinkCoffee') {
 			setFilter(coffeeItem)
+			addActiveStyleFilter('#brazil')
 		} else if (myFilter === 'coffeeBeans') {
 			setFilter(coffeeInServer)
+			addActiveStyleFilter('#columbia')
 		} else console.log('Happened an error');
 	};
 
 	const searchFilter = (e) => { 
-		let letters = e.target.value;
+		let letters = e.target.value.toLowerCase();
 		setSearch(letters)
 		setFilter(allItems.filter(coffee => coffee.title.toLowerCase().indexOf(letters) > -1)) 
 	};

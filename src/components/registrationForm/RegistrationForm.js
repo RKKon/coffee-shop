@@ -17,13 +17,13 @@ const RegistrationForm = ({toggleRegForm, toggleLogInForm}) => {
       })}
       > 
         <div onClick={() => toggleRegForm(false)} className='registration_form_cross'>&times;</div>
-        <h2 className="registration_form_title">Sign up</h2>
+        <h2 className="registration_form_title">Register</h2>
         <input {...register("username", {required: true, minLength: 2})} 
           className="registration_form_item" type="text" placeholder="Username" />
         <input {...register("password", {required: true, minLength: 5})} 
           className="registration_form_item" type="text" placeholder="Password" />
-        <input {...register("repeatPassword", {required: true, minLength: 5})}
-        className="registration_form_item" type="text" placeholder="Repeat password" />
+        {/* <input {...register("repeatPassword", {required: true, minLength: 5})}
+        className="registration_form_item" type="text" placeholder="Repeat password" /> */}
         <input {...register("email", {required: true})} 
           className="registration_form_item" type="text" placeholder="Email" />
         <p onClick={openLogInForm} className="registration_form_link"> 

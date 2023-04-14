@@ -5,6 +5,7 @@ import { FetchJson, CoffeeAPI } from '../pages/Server';
 import Subheader from '../subheader/Subheader';
 import OurCoffee from '../ourCoffee/OurCoffee';
 import SearchAndFilterPanel from '../searchAndFilterPanel/SearchAndFilterPanel';
+import ErrorBoundary from '../errorBoundary/ErrorBoundary';
 
 import NotFoundCoffee from '../notFoundCoffee/NotFoundCoffee';
 import Cart from '../cart/Cart';
@@ -32,6 +33,7 @@ const OurCoffeePage = () => {
 	}
   
 	const updateCoffeeDataFromAPI = () => {
+		FetchJson(setCoffeeInServer); // in above not fully works. If try use down - show null
 		if (coffeeItem) {
 			// eslint-disable-next-line array-callback-return
 			coffeeItem.map((item, i) => {
@@ -158,17 +160,18 @@ const OurCoffeePage = () => {
 
       <Subheader subheaderBG={'subheader_our_coffee'} subheaderTitle="Our Coffee"/>
       <OurCoffee/>
-
-      {loading ? <Spinner selectorId='preloader_for_items'/> : !filter ? <NotFoundCoffee visibleLink={false}/>
-			: <RandomCoffee allItems={allItems} addToCart={addToCart}/>}
-
+			<ErrorBoundary>
+				{loading ? <Spinner selectorId='preloader_for_items'/> : !filter ? <NotFoundCoffee visibleLink={false}/>
+				: <RandomCoffee allItems={allItems} addToCart={addToCart}/>}
+			</ErrorBoundary>
 			<Cart cart = {cart} showCart={showCart} onDeleteFromCart={onDeleteFromCart} 
 			totalPrice={totalPrice} onCartDecrCoffee={onCartDecrCoffee} 
 			onCartIncrCoffee={onCartIncrCoffee} setCart={setCart} setTotalPrice={setTotalPrice} />
-      
-      <SearchAndFilterPanel coffeeItem={coffeeItem} coffeeInServer={coffeeInServer} 
-      allItems={allItems} basicFilter={filter} cart={cart} totalPrice={totalPrice} 
-      loading={loading} addToCart={addToCart} updateCoffeeDataFromAPI={updateCoffeeDataFromAPI} />
+			<ErrorBoundary>
+				<SearchAndFilterPanel coffeeItem={coffeeItem} coffeeInServer={coffeeInServer} 
+				allItems={allItems} basicFilter={filter} cart={cart} totalPrice={totalPrice} 
+				loading={loading} addToCart={addToCart} updateCoffeeDataFromAPI={updateCoffeeDataFromAPI} />
+			</ErrorBoundary>		
     </>
   )
 };

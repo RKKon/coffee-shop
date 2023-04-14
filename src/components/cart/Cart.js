@@ -74,7 +74,7 @@ const Cart = (props) => {
               {/* <span className='cart_item_country'>{cart.country}</span> */} 
               <div className='cart_quantity'>
                 <button className='cart_minus_quantity_btn' onClick={() => onCartDecrCoffee(cart.id)}>-</button>
-                <span>{cart.quantity ? cart.quantity : null}</span>
+                <span>{cart.quantity || cart.quantity === 0 ? cart.quantity : null}</span>
                 <button className='cart_plus_quantity_btn' onClick={() => onCartIncrCoffee(cart.id)}>+</button>
               </div>
               <span className='cart_item_price'>{cart.price ? cart.price : null}</span> 

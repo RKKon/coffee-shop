@@ -1,4 +1,4 @@
-export const FetchJson = (setCoffeeItem, url = './db.json') => {
+export const FetchJson = (setCoffeeItem, url = './coffee-shop/db.json') => {
   fetch(url)
     .then(response => response.json())
     .then(data => setCoffeeItem(data.coffeeCard))
@@ -7,11 +7,11 @@ export const FetchJson = (setCoffeeItem, url = './db.json') => {
 }
 
 export const CoffeeAPI = async (setCoffeeAPI, setLoading) => {
-  fetch('https://api.sampleapis.com/coffee/hot')
+  await fetch('https://api.sampleapis.com/coffee/hot')
   .then(response => response.json())
   .then(data => {
     let res = []
-    for (let i = 0; i < 20; i++) { res.push(data[i]) }
+    for (let i = 0; i < data.length; i++) { res.push(data[i]) }
     // before was in //
     // let delDuplicates = []; // this part to remove duplicates items by using title, not id
     // for (let i = 0; i < 20; i++) {
