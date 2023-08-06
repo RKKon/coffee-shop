@@ -1,18 +1,139 @@
 {
-  "coffeeCard": [
+  "coffeeDrink": [{
+      "id": 7,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1521813475821-5e3f5bc3c7a6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=675&q=80",
+      "title": "Mocha",
+      "country": "Columbia",
+      "ingredients": "Espresso shot, many amount of milk and cacao chocolate",
+      "price": "4.50$",
+      "quantity": 1,
+      "description": "Espresso shot, many amount of milk and cacao chocolate"
+    },
     {
-      "id": 991,
+      "id": 2,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1534687941688-651ccaafbff8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "title": "Cortado",
+      "country": "Columbia",
+      "ingredients": "Espresso shot with a small amount of milk",
+      "price": "5.59$",
+      "quantity": 1,
+      "description": "Espresso shot with a small amount of milk"
+    },
+    {
+      "id": 3,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1556845925-1ff299fcd5b0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "title": "Americano",
+      "country": "Columbia",
+      "ingredients": "Espresso shot with pure water",
+      "price": "4.99$",
+      "quantity": 1,
+      "description": "Espresso shot with pure water"
+    },
+    {
+      "id": 4,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1558210834-473f430c09ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "title": "Flat white",
+      "country": "Columbia",
+      "ingredients": "Espresso shot with less amout of milk than cappuccino",
+      "price": "3.99$",
+      "quantity": 1,
+      "description": "Espresso shot with less amout of milk than cappuccino"
+    },
+    {
+      "id": 5,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1551539441-309773d8580b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80",
+      "title": "Flat white",
+      "country": "Columbia",
+      "ingredients": "Espresso shot with some amount of milk",
+      "price": "5.60$",
+      "quantity": 1,
+      "description": "Espresso shot with some amount of milk"
+    },
+    {
+      "id": 6,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1555778586-061e5dee1102?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1316&q=80",
+      "title": "Latte",
+      "country": "Columbia",
+      "ingredients": "Espresso shot with many amount of milk",
+      "price": "4.99$",
+      "quantity": 1,
+      "description": "Espresso shot with many amount of milk"
+    },
+    {
+      "id": 8,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1541498355002-4ee81a1872ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80",
+      "title": "V60",
+      "country": "Columbia",
+      "ingredients": "Filtered coffee with water spreading all flavor notes",
+      "price": "5.20$",
+      "quantity": 1,
+      "description": "Filtered coffee with water spreading all flavor notes"
+    },
+    {
+      "id": 9,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1520722217742-5887a8cb5778?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "title": "Chemex",
+      "country": "Columbia",
+      "ingredients": "Filtered coffee with water spreading all flavor notes",
+      "price": "6.59$",
+      "quantity": 1,
+      "description": "Filtered coffee with water spreading all flavor notes"
+    },
+    {
+      "id": 10,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1496198183329-402041b2487b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1032&q=80",
+      "title": "Aeropress",
+      "country": "Columbia",
+      "ingredients": "Filtered pressure coffee",
+      "price": "4.79$",
+      "quantity": 1,
+      "description": "Filtered pressure coffee"
+    },
+    {
+      "id": 1,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+      "title": "Espresso",
+      "country": "Columbia",
+      "ingredients": "Small bitter beverage that  spreads all flavor notes",
+      "price": "4.99$",
+      "quantity": 1,
+      "description": "Small bitter beverage that  spreads all flavor notes"
+    },
+    {
+      "id": 11,
+      "link": "/presto",
+      "image": "https://images.unsplash.com/photo-1550048192-f5416a1f132a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
+      "title": "Syphon",
+      "country": "Columbia",
+      "ingredients": "It produces a delicate, tea-like cup of coffee",
+      "price": "7.30$",
+      "quantity": 1,
+      "description": "It produces a delicate, tea-like cup of coffee"
+    }
+  ],
+  "coffeeBeans": [{
+      "id": 91,
       "link": "/aromistico",
       "image": "/coffee-shop/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "AROMISTICO Coffee 1 kg",
       "country": "Brazil",
       "ingredients": ["Secret"],
-      "price": "7.00$",
+      "price": "7.10$",
       "quantity": 1,
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 992,
+      "id": 92,
       "link": "/great_coffee",
       "image": "/coffee-shop/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "Great Coffee 1 kg",
@@ -23,7 +144,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 993,
+      "id": 93,
       "link": "/awesome_coffee",
       "image": "/coffee-shop/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "Awesome Coffee 0.5 kg",
@@ -34,7 +155,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 994,
+      "id": 94,
       "link": "/new_coffee",
       "image": "/coffee-shop/static/media/layout_coffee.dcb91dcba4b6b965f048.png",
       "title": "New Coffee 1 kg",
@@ -45,7 +166,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 995,
+      "id": 95,
       "link": "/solimo",
       "image": "/coffee-shop/static/media/main_coffee_1.93b7ca5e4837fd856f71.png",
       "title": "Solimo Coffee Beans 2 kg",
@@ -56,7 +177,7 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     {
-      "id": 996,
+      "id": 96,
       "link": "/presto",
       "image": "/coffee-shop/static/media/main_coffee_3.eac7a0065dc6e158d889.png",
       "title": "Presto Coffee Beans 1 kg",
@@ -67,24 +188,21 @@
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     }
   ],
-  "orders": [
-    {
+  "orders": [{
       "id": "95467386576395",
       "phone": "+7 (111) 111-11-11",
       "total": "6.20$",
-      "coffees": [
-        {
-          "id": 996,
-          "link": "/presto",
-          "image": "/coffee-shop/static/media/main_coffee_3.eac7a0065dc6e158d889.png",
-          "title": "Presto Coffee Beans 1 kg",
-          "country": "Columbia",
-          "ingredients": ["Secret"],
-          "price": "15.99$",
-          "quantity": 1,
-          "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-        }
-      ]
+      "coffees": [{
+        "id": 996,
+        "link": "/presto",
+        "image": "/coffee-shop/static/media/main_coffee_3.eac7a0065dc6e158d889.png",
+        "title": "Presto Coffee Beans 1 kg",
+        "country": "Columbia",
+        "ingredients": ["Secret"],
+        "price": "15.99$",
+        "quantity": 1,
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      }]
     }
 
   ]

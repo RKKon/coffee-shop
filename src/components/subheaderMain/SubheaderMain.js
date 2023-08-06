@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import '../../assets/sass/style.sass';
-import './subheaderMain.sass';
+import "../../assets/sass/style.sass";
+import "./subheaderMain.sass";
 
-import coffeeBeansImg from '../../assets/icons/subheader_coffee_beans.png'
+import coffeeBeansImg from "../../assets/icons/subheader_coffee_beans.png";
 
 const SubheaderMain = () => {
   return (
@@ -14,17 +14,17 @@ const SubheaderMain = () => {
           <div className="flex_wrapper_beans">
             <div className="flex_beans">
               <div className="left_line white_line"></div>
-              <img className="coffee_beans_img" src={coffeeBeansImg} alt="coffee beans"/>
+              <img className="coffee_beans_img" src={coffeeBeansImg} alt="coffee beans" />
               <div className="right_line white_line"></div>
             </div>
           </div>
           <h3 className="sub_title">We makes every day full of energy and taste</h3>
           <h3 className="sub_title mb_10">Want to try our beans?</h3>
-          <Link to="/ourCoffee"><button className="btn">More</button></Link>
+          {/* <Link to="/ourCoffee"><button className="btn">More</button></Link> */}
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default SubheaderMain;
