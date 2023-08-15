@@ -11,7 +11,7 @@ const ViewCoffeeItems = ({ filteredCoffeeItem, addToCart, closeItemMessage }) =>
       {filteredCoffeeItem.map((coffeeItem) => {
         return (
           <li key={coffeeItem.id ? coffeeItem.id : null} className="search_flex_item">
-            <Link to={`/ourCoffee/${coffeeItem.id ? coffeeItem.id : null}`}>
+            <Link to={`/coffee-shop/ourCoffee/${coffeeItem.id ? coffeeItem.id : null}`}>
               <img
                 className="search_item_img"
                 src={coffeeItem.image ? coffeeItem.image : imgNotFound}
