@@ -1,7 +1,4 @@
 import { Helmet } from "react-helmet";
-import { useState, useEffect } from "react";
-import { FetchJson } from "../pages/Server";
-// import { CoffeeAPI } from "../pages/Server";
 
 import Subheader from "../subheader/Subheader";
 import OurCoffee from "../ourCoffee/OurCoffee";

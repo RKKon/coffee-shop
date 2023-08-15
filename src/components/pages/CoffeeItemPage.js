@@ -1,8 +1,7 @@
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 
-import { FetchJson } from "./Server";
-// import { CoffeeAPI } from "./Server";
+import { FetchJson, FetchCoffeeBeans } from "../server/Server";
 import Subheader from "../subheader/Subheader";
 import NotFoundCoffee from "../notFoundCoffee/NotFoundCoffee";
 import Spinner from "../spinner/Spinner";
@@ -15,16 +14,16 @@ import "./coffeeItemPage.sass";
 import coffeeBeans from "../../assets/icons/main_page_coffee_beans.png";
 
 const CoffeeItemSinglePage = () => {
-  //const [coffeeItem, setCoffeeItem] = useState(null);
   const [coffeeInServer, setCoffeeInServer] = useState(null);
+  const [coffeeItem, setCoffeeItem] = useState(null);
   const [filter, setFilter] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(filter);
   // const coffeePrices = ['1.29$', "2.30$", '3.10$', '1.99$', '2.00$','1.69$', '3.10$', '4.99$', '2.49$', '1.99$', '2.20$', '2.99$', '3.99$', '2.59$', '2.99$', '3.49$', '2.10$', '1.49$', '2.30$', '4.29$'];
 
   const getCoffeeItems = async () => {
     // await CoffeeAPI(setCoffeeItem, setLoading);
-    FetchJson(setCoffeeInServer, setLoading, "http://localhost:3000/coffee-shop/db.json");
+    FetchJson(setCoffeeInServer, setLoading);
+    FetchCoffeeBeans(setCoffeeItem, setLoading);
   };
 
   // const updateCoffeeDataFromAPI = () => {
@@ -41,16 +40,20 @@ const CoffeeItemSinglePage = () => {
 
   const getRightItem = () => {
     // updateCoffeeDataFromAPI();
-    // let filteredOne = coffeeItem ? coffeeItem.filter(coffee => coffee.id === url) : null
-    let filteredCoffee = coffeeInServer
-      ? coffeeInServer.filter((coffee) => coffee.id === url)
+    // let filteredOne = coffeeItem ? coffeeItem.filter((coffee) => coffee.id === url) : null;
+    let allCoffeeItems;
+    if (coffeeInServer && coffeeItem) {
+      allCoffeeItems = coffeeInServer.concat(coffeeItem);
+    }
+    let filteredCoffee = allCoffeeItems
+      ? allCoffeeItems.filter((coffee) => coffee.id === url)
       : null;
 
     if (filteredCoffee && filteredCoffee.length) {
       setFilter(filteredCoffee);
     }
     // else if (filteredOne && filteredOne.length) {
-    //   setFilter(filteredOne)
+    //   setFilter(filteredOne);
     // }
   };
 
@@ -63,7 +66,7 @@ const CoffeeItemSinglePage = () => {
   useEffect(() => {
     getRightItem();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [coffeeInServer]);
+  }, [coffeeInServer, coffeeItem]);
 
   return (
     <>
@@ -97,7 +100,7 @@ const CoffeeItemSinglePage = () => {
                 </div>
               </div>
               <p className="bold_text item_mb">
-                Ingredients:<span> {filter ? filter[0].ingredients.join(", ") : null}</span>
+                Ingredients:<span> {filter ? filter[0].ingredients : null}</span>
               </p>
               <p className="item_mb">
                 <span className="bold_text">Description:</span>{" "}

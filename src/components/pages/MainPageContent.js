@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 // import { CoffeeAPI } from "../pages/Server";
-import { FetchJson, FetchCoffeeBeans } from "../pages/Server";
+import { FetchJson, FetchCoffeeBeans } from "../server/Server";
 import SearchAndFilterPanel from "../searchAndFilterPanel/SearchAndFilterPanel";
 import ErrorBoundary from "../errorBoundary/ErrorBoundary";
 

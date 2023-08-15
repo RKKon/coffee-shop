@@ -1,4 +1,4 @@
-export const FetchJson = (setCoffeeItem, setLoading, url = "./coffee-shop/db.json") => {
+export const FetchJson = (setCoffeeItem, setLoading, url = "/coffee-shop/db.json") => {
   setLoading(true);
   fetch(url)
     .then((response) => response.json())
@@ -12,7 +12,7 @@ export const FetchJson = (setCoffeeItem, setLoading, url = "./coffee-shop/db.jso
     });
   return;
 };
-export const FetchCoffeeBeans = (setCoffeeItem, setLoading, url = "./coffee-shop/db.json") => {
+export const FetchCoffeeBeans = (setCoffeeItem, setLoading, url = "/coffee-shop/db.json") => {
   setLoading(true);
   fetch(url)
     .then((response) => response.json())
