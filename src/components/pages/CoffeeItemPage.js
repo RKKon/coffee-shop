@@ -72,7 +72,7 @@ const CoffeeItemSinglePage = () => {
     <>
       <Helmet>
         <meta name="description" content="App made by my own. I using here React." />
-        <title>{filter ? filter[0].title : null}</title>
+        <title>{filter?.[0]?.title ?? ""}</title>
       </Helmet>
 
       <Subheader subheaderBG={"subheader_our_coffee"} subheaderTitle="Our Coffee" />
@@ -85,13 +85,13 @@ const CoffeeItemSinglePage = () => {
           <div className="coffee_item_main_flex">
             <img
               className="coffee_page_item_img"
-              src={filter && filter[0].image !== null ? filter[0].image : imgNotFound}
+              src={filter?.[0]?.image ?? imgNotFound}
               onError={replaceImage}
               alt="our coffee"
             />
 
             <div className="about_our_beans_description">
-              <h2 className="content_title">{filter ? filter[0].title : null}</h2>
+              <h2 className="content_title">{filter?.[0]?.title ?? "name unknown"}</h2>
               <div className="flex_wrapper_beans">
                 <div className="flex_beans coffee_item_mb25">
                   <div className="left_line"></div>
@@ -100,14 +100,13 @@ const CoffeeItemSinglePage = () => {
                 </div>
               </div>
               <p className="bold_text item_mb">
-                Ingredients:<span> {filter ? filter[0].ingredients : null}</span>
+                Ingredients:<span> {filter?.[0]?.ingredients ?? ""}</span>
               </p>
               <p className="item_mb">
-                <span className="bold_text">Description:</span>{" "}
-                {filter ? filter[0].description : null}
+                <span className="bold_text">Description:</span> {filter?.[0]?.description ?? ""}
               </p>
               <p className="bold_text">
-                Price: <span className="item_big_price"> {filter ? filter[0].price : null}</span>
+                Price: <span className="item_big_price"> {filter?.[0]?.price ?? null}</span>
               </p>
               <button className="coffee_item_btn">Get coffee now</button>
             </div>

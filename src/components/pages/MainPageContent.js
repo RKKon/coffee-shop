@@ -9,7 +9,7 @@ import NotFoundCoffee from "../notFoundCoffee/NotFoundCoffee";
 import Cart from "../cart/Cart";
 import Spinner from "../spinner/Spinner";
 import RandomCoffee from "../randomCoffee/RandomCoffee";
-import AddItemMessage from "../../addItemMessage/AddItemMessage";
+import AddItemMessage from "./../addItemMessage/AddItemMessage";
 
 import "../../assets/sass/style.sass";
 import "../searchAndFilterPanel/searchPanel.sass";
@@ -178,7 +178,11 @@ const MainPageContent = () => {
         ) : !filter ? (
           <NotFoundCoffee visibleLink={false} />
         ) : (
-          <RandomCoffee allItems={allItems} addToCart={addToCart} />
+          <RandomCoffee
+            allItems={allItems}
+            addToCart={addToCart}
+            closeItemMessage={closeItemMessage}
+          />
         )}
       </ErrorBoundary>
       <Cart

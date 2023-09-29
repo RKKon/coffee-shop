@@ -5,8 +5,8 @@ import "../../assets/sass/style.sass";
 
 import imgNotFound from "../../assets/img/img_not_found.jpg";
 
-const RandomCoffee = ({ allItems, addToCart }) => {
-  const amountCoffee = allItems.length;
+const RandomCoffee = ({ allItems, addToCart, closeItemMessage }) => {
+  const amountCoffee = allItems.length - 1;
   let index = +(Math.random() * amountCoffee).toFixed();
   const [coffeeItem, setCoffeeItem] = useState(allItems[index]);
 
@@ -24,18 +24,22 @@ const RandomCoffee = ({ allItems, addToCart }) => {
         <div className="random_coffee_card">
           <img
             className="random_coffee_card_img"
-            alt={coffeeItem.title ? coffeeItem.title : null}
-            src={coffeeItem.image ? coffeeItem.image : imgNotFound}
+            alt={coffeeItem?.title ?? "name unknown"}
+            src={coffeeItem?.image ?? imgNotFound}
             onError={replaceImage}
           />
           <div className="random_coffee_card_flex_div">
-            <h3 className="coffee_name">{coffeeItem.title ? coffeeItem.title : null}</h3>
+            <h3 className="coffee_name">{coffeeItem?.title ?? "name unknown"}</h3>
             <p className="random_coffee_ingredients">
-              Ingredients:<span> {coffeeItem.ingredients ? coffeeItem.ingredients : null}</span>
+              Ingredients:
+              <span> {coffeeItem?.ingredients ?? "ingredients unknown"}</span>
             </p>
-            <p className="random_coffee_price">{coffeeItem.price ? coffeeItem.price : null}</p>
+            <p className="random_coffee_price">{coffeeItem?.price ?? ""}</p>
             <button
-              onClick={() => addToCart(coffeeItem.id ? coffeeItem.id : null)}
+              onClick={() => {
+                closeItemMessage();
+                addToCart(coffeeItem?.id ?? null);
+              }}
               className="random_coffee_card_btn"
             >
               Try now
