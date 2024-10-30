@@ -26,7 +26,7 @@ const Header = () => {
         <nav>
           <ul className="header_flex_menu">
             <li className="header_item">
-              <Link
+              <Link tabIndex={1}
                 className={`${activeClass === 0 ? "header_active" : ""}`}
                 onClick={() => handleChangeActiveClass(0)}
                 to="/coffee-shop"
@@ -35,7 +35,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="header_item">
-              <Link
+              <Link tabIndex={2}
                 className={`${activeClass === 1 ? "header_active" : ""}`}
                 onClick={() => handleChangeActiveClass(1)}
                 to="/coffee-shop/ourCoffee"
@@ -44,7 +44,7 @@ const Header = () => {
               </Link>
             </li>
             <li className="header_item">
-              <Link
+              <Link tabIndex={3}
                 className={`${activeClass === 2 ? "header_active" : ""}`}
                 onClick={() => handleChangeActiveClass(2)}
                 to="/coffee-shop/yourPleasure"
@@ -52,7 +52,8 @@ const Header = () => {
                 For your pleasure
               </Link>
             </li>
-            <li onClick={() => toggleRegForm(true)} className="header_item header_item_from">
+            <li onClick={() => toggleRegForm(true)} tabIndex={4}
+              className="header_item header_item_from">
               Sign in
             </li>
           </ul>

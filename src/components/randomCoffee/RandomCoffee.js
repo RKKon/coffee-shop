@@ -35,7 +35,7 @@ const RandomCoffee = ({ allItems, addToCart, closeItemMessage }) => {
               <span> {coffeeItem?.ingredients ?? "ingredients unknown"}</span>
             </p>
             <p className="random_coffee_price">{coffeeItem?.price ?? ""}</p>
-            <button
+            <button tabIndex={6}
               onClick={() => {
                 closeItemMessage();
                 addToCart(coffeeItem?.id ?? null);
@@ -46,7 +46,7 @@ const RandomCoffee = ({ allItems, addToCart, closeItemMessage }) => {
             </button>
           </div>
         </div>
-        <button onClick={getRandomCoffee} className="random_coffee_btn">
+        <button tabIndex={7} onClick={getRandomCoffee} className="random_coffee_btn">
           Try new coffee
         </button>
       </div>

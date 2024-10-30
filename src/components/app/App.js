@@ -11,12 +11,8 @@ const OurCoffeePage = lazy(() => import("../pages/OurCoffeePage"));
 const CoffeeItemSinglePage = lazy(() => import("../pages/CoffeeItemPage"));
 const YourPleasurePage = lazy(() => import("../pages/YourPleasurePage"));
 
-// 6) drill using another library and documentation from library
-// to drill registration form
-
-// Cart for every page???
-// move to redux
-// make staff in page with specific coffee button to add to cart coffee.
+// using another library and documentation from library?
+// move to redux ?
 
 function App() {
   return (

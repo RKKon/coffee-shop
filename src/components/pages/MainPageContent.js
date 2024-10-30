@@ -54,7 +54,7 @@ const MainPageContent = () => {
   };
 
   // Cart functions
-  const showCart = () =>
+  const toggleCart = () =>
     document.querySelector(".cart_list").classList.toggle("cart_items_display_none");
 
   const addToCart = function (id) {
@@ -79,8 +79,8 @@ const MainPageContent = () => {
       !cart
         ? null
         : cart.filter((coffee) => {
-            return coffee.id !== id;
-          }),
+          return coffee.id !== id;
+        }),
     );
   };
 
@@ -101,50 +101,50 @@ const MainPageContent = () => {
     return !cart
       ? null
       : setCart(
-          cart.map((item) => {
-            if (item.id === id) {
-              let newPrice = "";
-              // eslint-disable-next-line array-callback-return
-              allItems.map((coffee) => {
-                if (coffee.id === id) {
-                  newPrice =
-                    (+item.price.slice(0, -1) + +coffee.price.slice(0, -1)).toFixed(2) + "$";
-                }
-              });
-              return {
-                ...item,
-                quantity: item.quantity + 1,
-                price: newPrice,
-              };
-            } else return item;
-          }),
-        );
+        cart.map((item) => {
+          if (item.id === id) {
+            let newPrice = "";
+            // eslint-disable-next-line array-callback-return
+            allItems.map((coffee) => {
+              if (coffee.id === id) {
+                newPrice =
+                  (+item.price.slice(0, -1) + +coffee.price.slice(0, -1)).toFixed(2) + "$";
+              }
+            });
+            return {
+              ...item,
+              quantity: item.quantity + 1,
+              price: newPrice,
+            };
+          } else return item;
+        }),
+      );
   };
 
   const onCartDecrCoffee = (id) => {
     return !cart
       ? null
       : setCart(
-          cart.map((item) => {
-            if (item.id === id) {
-              if (item.quantity !== 0) {
-                let newPrice = "";
-                // eslint-disable-next-line array-callback-return
-                allItems.map((coffee) => {
-                  if (coffee.id === id) {
-                    newPrice =
-                      (+item.price.slice(0, -1) - +coffee.price.slice(0, -1)).toFixed(2) + "$";
-                  }
-                });
-                return {
-                  ...item,
-                  quantity: item.quantity - 1,
-                  price: newPrice,
-                };
-              } else return item;
+        cart.map((item) => {
+          if (item.id === id) {
+            if (item.quantity !== 0) {
+              let newPrice = "";
+              // eslint-disable-next-line array-callback-return
+              allItems.map((coffee) => {
+                if (coffee.id === id) {
+                  newPrice =
+                    (+item.price.slice(0, -1) - +coffee.price.slice(0, -1)).toFixed(2) + "$";
+                }
+              });
+              return {
+                ...item,
+                quantity: item.quantity - 1,
+                price: newPrice,
+              };
             } else return item;
-          }),
-        );
+          } else return item;
+        }),
+      );
   };
 
   const closeItemMessage = () => {
@@ -187,7 +187,7 @@ const MainPageContent = () => {
       </ErrorBoundary>
       <Cart
         cart={cart}
-        showCart={showCart}
+        toggleCart={toggleCart}
         onDeleteFromCart={onDeleteFromCart}
         totalPrice={totalPrice}
         onCartDecrCoffee={onCartDecrCoffee}

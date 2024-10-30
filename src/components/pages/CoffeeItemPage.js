@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { FetchJson, FetchCoffeeBeans } from "../server/Server";
 import Subheader from "../subheader/Subheader";
@@ -59,6 +60,13 @@ const CoffeeItemSinglePage = () => {
 
   const replaceImage = (error) => (error.target.src = imgNotFound);
 
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate('/coffee-shop');
+    window.scrollTo({ top: 1000, behavior: 'smooth' });
+  };
+
+
   useEffect(() => {
     getCoffeeItems();
   }, []);
@@ -82,6 +90,7 @@ const CoffeeItemSinglePage = () => {
         <NotFoundCoffee selector="coffee_not_found_center" />
       ) : (
         <section className="coffee_item_main">
+          <a href="/coffee-shop"><button className="back_to_coffee_list">Back to coffee list</button></a>
           <div className="coffee_item_main_flex">
             <img
               className="coffee_page_item_img"
