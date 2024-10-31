@@ -10,8 +10,8 @@ import './cart.sass';
 import '../../assets/sass/style.sass';
 
 const Cart = (props) => {
-  const { cart, toggleCart, onDeleteFromCart, totalPrice, onCartDecrCoffee, onCartIncrCoffee,
-    setCart, setTotalPrice } = props
+  const { cart, setCart, toggleCart, onDeleteFromCart, totalPrice, onCartDecrCoffee, onCartIncrCoffee,
+    setTotalPrice } = props
 
   const [openedFrom, setOpenedForm] = useState(false);
   const [customerPhone, setCustomerPhone] = useState(null);

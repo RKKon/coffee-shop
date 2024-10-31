@@ -1,6 +1,5 @@
 import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 import { FetchJson, FetchCoffeeBeans } from "../server/Server";
 import Subheader from "../subheader/Subheader";
@@ -59,13 +58,6 @@ const CoffeeItemSinglePage = () => {
   };
 
   const replaceImage = (error) => (error.target.src = imgNotFound);
-
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate('/coffee-shop');
-    window.scrollTo({ top: 1000, behavior: 'smooth' });
-  };
-
 
   useEffect(() => {
     getCoffeeItems();

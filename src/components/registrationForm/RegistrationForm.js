@@ -58,7 +58,7 @@ const RegistrationForm = ({ toggleRegForm, toggleLogInForm }) => {
       className="registration_form_wrapper">
       {setOverflowHidden(true)}
       {!toggleThanksModal ?
-        <form className="registration_form" onSubmit={handleSubmit(showThanksModal)}>
+        <form id="reg_from" className="registration_form" onSubmit={handleSubmit(showThanksModal)}>
           <div className='registration_form_cross' onClick={() => {
             toggleRegForm(false)
             setOverflowHidden(false)

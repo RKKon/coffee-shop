@@ -7,7 +7,7 @@ const Form = ({ closeForm, sendForm, customerPhoneValue }) => {
 
   return (
     <div className='form_wrapper'>
-      <form className='form'/* action="" */>
+      <form id='contact_form' className='form'/* action="" */>
         <div onClick={closeForm} className='form_cross'>&times;</div> {/* cross */}
         <h2 className='form_h2'>It is time to drink coffee</h2>
         <input onChange={getPhone} required name='phone' className='form_input' type="text" placeholder='Your phone number' />

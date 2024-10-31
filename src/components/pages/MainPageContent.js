@@ -19,7 +19,8 @@ const MainPageContent = () => {
   const [coffeeInServer, setCoffeeInServer] = useState(null);
   const [allItems, setAllItems] = useState(null);
   const [filter, setFilter] = useState(null);
-  const [cart, setCart] = useState([]);
+  const [storedCart, setStoredCart] = useState(() => JSON.parse(localStorage.getItem('cart')) || []);
+  const [cart, setCart] = useState(storedCart);
   const [totalPrice, setTotalPrice] = useState(0);
   const [loading, setLoading] = useState(true);
   const [showAddItemMsg, setShowAddItemMsg] = useState(false);
@@ -169,6 +170,10 @@ const MainPageContent = () => {
     getTotalPrice();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cart]);
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+    setStoredCart(cart);
+  }, [cart])
 
   return (
     <>
@@ -193,6 +198,7 @@ const MainPageContent = () => {
         onCartDecrCoffee={onCartDecrCoffee}
         onCartIncrCoffee={onCartIncrCoffee}
         setCart={setCart}
+        setStoredCart={setStoredCart}
         setTotalPrice={setTotalPrice}
       />
       {showAddItemMsg ? <AddItemMessage cart={cart} /> : null}

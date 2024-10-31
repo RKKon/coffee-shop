@@ -35,7 +35,7 @@ const SearchAndFilterPanel = (props) => {
   //   }
   // };
 
-  const addActiveStyleFilter = (idOrClassName = "#all") => {
+  const addActiveStyleFilter = (idOrClassName = "#all_coffee") => {
     let allInputs = document.getElementsByClassName("filter_style");
     Array.from(allInputs).forEach((item) => item.classList.remove("filter_active"));
     document.querySelector(idOrClassName).classList.add("filter_active");
@@ -48,15 +48,15 @@ const SearchAndFilterPanel = (props) => {
   const mainFilter = (myFilter) => {
     if (myFilter === "allItems") {
       changeCoffeeFilter(allItems);
-      addActiveStyleFilter("#all");
+      addActiveStyleFilter("#all_coffee");
       displayBtnShowAllCoffee("none");
     } else if (myFilter === "drinkCoffee") {
       changeCoffeeFilter(coffeeInServer);
-      addActiveStyleFilter("#brazil");
+      addActiveStyleFilter("#drink_coffee");
       displayBtnShowAllCoffee("block");
     } else if (myFilter === "coffeeBeans") {
       changeCoffeeFilter(coffeeItem);
-      addActiveStyleFilter("#columbia");
+      addActiveStyleFilter("#coffee_beans");
       displayBtnShowAllCoffee("block");
     } else console.log("Happened an error");
   };
@@ -84,7 +84,7 @@ const SearchAndFilterPanel = (props) => {
           />
         </div>
         <div>
-          <label className="filter_mr" htmlFor="filerCoffee">
+          <label className="filter_mr" htmlFor="all_coffee">
             Or filter
           </label>
           <input
@@ -92,7 +92,7 @@ const SearchAndFilterPanel = (props) => {
             className="filter_style"
             type="button"
             value="All Coffee"
-            id="all"
+            id="all_coffee"
             name="allCoffee"
           />
           <input
@@ -100,17 +100,16 @@ const SearchAndFilterPanel = (props) => {
             className="filter_style"
             type="button"
             value="Drink coffee"
-            id="brazil"
-            name="brazil"
+            id="drink_coffee"
+            name="drink_coffee"
           />
-          {/* <input onClick={() => mainFilter('Kenya')} className="filter_style" type="button" value="coffee beans" id="kenya" name="kenya"/> */}
           <input
             onClick={() => mainFilter("coffeeBeans")}
             className="filter_style"
             type="button"
             value="Coffee beans"
-            id="columbia"
-            name="columbia"
+            id="coffee_beans"
+            name="coffee_beans"
           />
         </div>
       </div>

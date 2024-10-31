@@ -58,7 +58,7 @@ const LogInForm = ({ toggleRegForm, toggleLogInForm }) => {
     <div tabIndex={1} autoFocus onClick={(event) => closeFormByClickWrapper(event)} className="registration_form_wrapper">
       {setOverflowHidden(true)}
       {!toggleThanksModal ? (
-        <form className="registration_form" onSubmit={handleSubmit(showThanksModal)} >
+        <form id='login_form' className="registration_form" onSubmit={handleSubmit(showThanksModal)} >
           <div className='registration_form_cross' onClick={() => {
             toggleLogInForm(false);
             setOverflowHidden(false);
